@@ -15,12 +15,20 @@ body {
   margin: 0;
   padding: 0;
   grid-template-columns: 41% 18% 41%;
-  grid-template-rows: [row1-start] 274px [row2-start] 63px [row3-start] 550px [row4-start] 471px [row5-start] 405px [row6-start] 470px [row7-start] 682px [row8-start] 405px {row9-start] 477px [row10-start] 402px [row11-start] 183px [row11-end];
+  grid-template-rows: [row1-start] 274px [row2-start] 63px [row3-start] 550px [row4-start] 471px [row5-start] 405px [row6-start] 470px [row7-start] 682px [row8-start] 405px [row9-start] 477px [row10-start] 402px [row11-start] 183px [row11-end];
 }
 
 .top-line img {
   width: 300px;
   height: 300px;
+}
+
+.columns1_2 {
+  grid-column: 1 / span 2;
+}
+
+.columns2_3 {
+  grid-column: 2 / span 2;
 }
 
 .title {
@@ -90,11 +98,26 @@ li a {
 }
 
 .skills_intro {
-  margin: 75px 0;
-  padding: 45px;
-  position: relative;
   line-height: 1.5;
   text-align: center;
+}
+
+.relative_parent {
+  position: relative;
+}
+
+.absolute_center_child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.skills_intro div {
+  display: inline-block;
+  text-align: left;
+  max-width: 500px;
 }
 
 .info_inner {
@@ -113,8 +136,6 @@ li a {
 }
 
 .images {
-  grid-column: 2 / 3;
-  grid-row: row3-start / row4-start;
   text-align: center;
 }
 
@@ -177,6 +198,14 @@ figcaption {
   color: white;
 }
 
+.userResearch div {
+  min-width: 500px;
+}
+
+.userResearch h2 {
+  margin-top: 0;
+}
+
 .box_left_research {
   background-color: #c0b633;
   text-align: center;
@@ -184,7 +213,7 @@ figcaption {
   margin: 0;
 }
 
-.userResearchImg img {
+.box_left_research img {
   width: 231px;
   height: 218px;
 }
